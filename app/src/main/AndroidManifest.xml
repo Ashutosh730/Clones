@@ -10,18 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Mic">
         <activity android:name=".OnBoardingScreen5"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic"/>
         <activity android:name=".OnBoardingScreen4"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic"/>
         <activity android:name=".OnBoardingScreen3"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic"/>
         <activity android:name=".OnBoardingScreen2"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic"/>
         <activity android:name=".OnBoardingScreen1"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic"/>
         <activity android:name=".OnBoardingScreen"
+            android:screenOrientation="portrait"
             android:theme="@style/Base.Theme.Mic"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
