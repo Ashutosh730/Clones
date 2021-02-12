@@ -20,11 +20,6 @@ public class OnBoardingScreen1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen1);
 
-        Window window = OnBoardingScreen1.this.getWindow();
-        window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
-        window.clearFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
-        window.setStatusBarColor(ContextCompat.getColor(OnBoardingScreen1.this, R.color.yellow));
-
         Button btn1 =findViewById(R.id.btn1);
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -10,21 +10,27 @@
         android:supportsRtl="true"
         android:theme="@style/Base.Theme.Mic">
         <activity android:name=".OnBoardingScreen5"
-            android:theme="@style/Base.Theme.Mic"/>
+            android:theme="@style/Base.Theme.Mic"
+            android:screenOrientation="portrait"/>
         <activity android:name=".OnBoardingScreen4"
-            android:theme="@style/Base.Theme.Mic"/>
+            android:theme="@style/Base.Theme.Mic"
+            android:screenOrientation="portrait"/>
         <activity android:name=".OnBoardingScreen3"
-            android:theme="@style/Base.Theme.Mic"/>
+            android:theme="@style/Base.Theme.Mic"
+            android:screenOrientation="portrait"/>
         <activity android:name=".OnBoardingScreen2"
-            android:theme="@style/Base.Theme.Mic"/>
+            android:theme="@style/Base.Theme.Mic"
+            android:screenOrientation="portrait"/>
         <activity android:name=".OnBoardingScreen1"
-            android:theme="@style/Base.Theme.Mic"/>
+            android:theme="@style/Base.Theme.Mic"
+            android:screenOrientation="portrait"/>
         <activity android:name=".OnBoardingScreen"
-            android:theme="@style/Base.Theme.Mic"/>
-        <activity android:name=".MainActivity">
+            android:theme="@style/Base.Theme.Mic"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
