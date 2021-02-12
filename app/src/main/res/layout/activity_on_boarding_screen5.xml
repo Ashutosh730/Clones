@@ -60,13 +60,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHeight_percent="0.6">
+        app:layout_constraintHeight_percent="0.5">
 
         <ImageView
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
             android:paddingBottom="52dp"
             android:src="@drawable/ic_onboarding5img"
             android:scaleType="fitXY"
@@ -80,7 +82,7 @@
             android:layout_weight="2"
             android:paddingLeft="24dp"
             android:paddingRight="24dp"
-            android:layout_marginBottom="24dp"
+            android:paddingBottom="12dp"
             android:text="Music, art concerned with combining vocal or instrumental sounds for beauty of form or emotional expression"
             style="@style/TextAppearance.MaterialComponents.Headline6"
             android:layout_gravity="center"/>
@@ -92,6 +94,7 @@
             android:src="@drawable/ic_onboarding5checkbox"
             android:layout_gravity="center"
             />
+
     </LinearLayout>
 
     <Button
@@ -99,7 +102,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:text="Get Started"
-        app:layout_constraintHeight_percent="0.065"
+        app:layout_constraintHeight_percent="0.07"
         app:layout_constraintWidth_percent="0.4"
         android:gravity="center"
         android:background="@color/yellow"
