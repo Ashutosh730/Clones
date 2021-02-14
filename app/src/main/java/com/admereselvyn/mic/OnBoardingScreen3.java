@@ -1,20 +1,17 @@
 package com.admereselvyn.mic;
 
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
-
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
 
-public class OnBoardingScreen3 extends AppCompatActivity {
+import static maes.tech.intentanim.CustomIntent.customType;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
+public class OnBoardingScreen3 extends AppCompatActivity {
+    float x1,x2;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,9 +21,36 @@ public class OnBoardingScreen3 extends AppCompatActivity {
         btn3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(OnBoardingScreen3.this, OnBoardingScreen4.class);
+                Intent intent = new Intent(OnBoardingScreen3.this, OnBoardingScreen5.class);
                 startActivity(intent);
             }
         });
+    }
+    //This method will create left and write gesture
+    public boolean onTouchEvent(MotionEvent touchEvent){
+        switch(touchEvent.getAction()){
+            case (MotionEvent.ACTION_DOWN):
+                x1 = touchEvent.getX();
+                break;
+            case (MotionEvent.ACTION_UP):
+                x2 = touchEvent.getX();
+                if( (x1>x2)&& (Math.abs(x1-x2)>200)){
+                    Intent i = new Intent(OnBoardingScreen3.this, OnBoardingScreen4.class);
+                    startActivity(i);
+                    customType(OnBoardingScreen3.this,"fadein-to-fadeout");
+                }
+                else if((x2>x1)&& (Math.abs(x2-x1)>200)) {
+                    Intent i = new Intent(OnBoardingScreen3.this, OnBoardingScreen2.class);
+                    startActivity(i);
+                    customType(OnBoardingScreen3.this,"fadein-to-fadeout");
+                }
+                break;
+        }
+        return false;
+    }
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        System.exit(0);
     }
 }

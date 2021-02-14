@@ -1,21 +1,42 @@
 package com.admereselvyn.mic;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
-import android.os.Build;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
+import android.view.MotionEvent;
+
+import static maes.tech.intentanim.CustomIntent.customType;
 
 public class OnBoardingScreen5 extends AppCompatActivity {
+    float x1,x2;
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen5);
 
+    }
+    //This method will create left and write gesture
+    public boolean onTouchEvent(MotionEvent touchEvent){
+        switch(touchEvent.getAction()){
+            case (MotionEvent.ACTION_DOWN):
+                x1 = touchEvent.getX();
+                break;
+            case (MotionEvent.ACTION_UP):
+                x2 = touchEvent.getX();
+                 if((x2>x1)&& (Math.abs(x2-x1)>200)) {
+                    Intent i = new Intent(OnBoardingScreen5.this, OnBoardingScreen4.class);
+                    startActivity(i);
+                     customType(OnBoardingScreen5.this,"fadein-to-fadeout");
+                }
+                break;
+        }
+        return false;
+    }
+    @Override
+    public void onBackPressed() {
+        finishAffinity();
+        System.exit(0);
     }
 }
