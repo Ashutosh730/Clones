@@ -1,7 +1,3 @@
-# Mic android app #
-
-Music Contest Android App of admereselvyn
-
 # Getting Started #
 These instructions will get you a copy of the project up and be running on your local machine for development and testing purposes.
 
