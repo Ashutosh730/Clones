@@ -25,7 +25,7 @@ public class OnBoardingScreen1 extends AppCompatActivity {
             }
         });
     }
-    //This method will create left and write gesture
+    //This method will create left and right gesture
     public boolean onTouchEvent(MotionEvent touchEvent){
         switch(touchEvent.getAction()){
             case (MotionEvent.ACTION_DOWN):
@@ -36,12 +36,12 @@ public class OnBoardingScreen1 extends AppCompatActivity {
                 if( (x1>x2)&& (Math.abs(x1-x2)>200)){
                     Intent i = new Intent(OnBoardingScreen1.this, OnBoardingScreen2.class);
                     startActivity(i);
-                    customType(OnBoardingScreen1.this,"fadein-to-fadeout");
+                    customType(OnBoardingScreen1.this,"left-to-right");
                 }
                 else if((x2>x1)&& (Math.abs(x2-x1)>200)) {
                     Intent i = new Intent(OnBoardingScreen1.this, OnBoardingScreen.class);
                     startActivity(i);
-                    customType(OnBoardingScreen1.this,"fadein-to-fadeout");
+                    customType(OnBoardingScreen1.this,"right-to-left");
                 }
                 break;
         }

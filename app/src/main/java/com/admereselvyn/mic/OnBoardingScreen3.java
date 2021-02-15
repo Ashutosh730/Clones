@@ -37,12 +37,12 @@ public class OnBoardingScreen3 extends AppCompatActivity {
                 if( (x1>x2)&& (Math.abs(x1-x2)>200)){
                     Intent i = new Intent(OnBoardingScreen3.this, OnBoardingScreen4.class);
                     startActivity(i);
-                    customType(OnBoardingScreen3.this,"fadein-to-fadeout");
+                    customType(OnBoardingScreen3.this,"left-to-right");
                 }
                 else if((x2>x1)&& (Math.abs(x2-x1)>200)) {
                     Intent i = new Intent(OnBoardingScreen3.this, OnBoardingScreen2.class);
                     startActivity(i);
-                    customType(OnBoardingScreen3.this,"fadein-to-fadeout");
+                    customType(OnBoardingScreen3.this,"right-to-left");
                 }
                 break;
         }
