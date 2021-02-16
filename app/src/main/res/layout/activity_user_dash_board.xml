@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
     tools:context=".UserDashBoard">
 
     <FrameLayout
@@ -87,8 +87,18 @@
             android:layout_height="56dp"
             android:layout_gravity="bottom"
             app:backgroundTint="@color/black"
-            app:fabAlignmentMode="center"
-            />
+            app:fabAlignmentMode="center">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:menu="@menu/buttom_app_bar_menu"
+                android:layout_marginRight="16dp"
+                android:layout_marginLeft="16dp"
+                android:background="@android:color/transparent"/>
+
+        </com.google.android.material.bottomappbar.BottomAppBar>
+
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
