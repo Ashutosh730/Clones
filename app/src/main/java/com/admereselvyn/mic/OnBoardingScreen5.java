@@ -5,6 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
 
 import static maes.tech.intentanim.CustomIntent.customType;
 
@@ -15,6 +17,16 @@ public class OnBoardingScreen5 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_on_boarding_screen5);
+
+        Button btn5;
+        btn5 = findViewById(R.id.btn5);
+        btn5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(OnBoardingScreen5.this, UserDashBoard.class);
+                startActivity(intent);
+            }
+        });
 
     }
     //This method will create left and write gesture
